@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" class="theme-btn" title="Toggle dark/light mode">
+                <i class="fas fa-sun" id="sun-icon"></i>
+                <i class="fas fa-moon" id="moon-icon"></i>
+            </button>
+        </div>
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="#skills" >Skills</a>
+            <a href="#education" >Education</a>
+            <a href="#experience" >Experience</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <img src="1main.png" alt="Virat Tiwari" class="profile-img">
+            <h1>Hi, It's <span>VIRAT</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>"Crafting code with logic, designing experiences with soul — where technology meets a touch of magic."</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/Virattiwari" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/viirat" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/tiwar9999"target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/virat_._tiwari/"target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="https://wa.me/7906649414?text=Hi%20Virat,%20I%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you." target="_blank" rel="noopener" class="btn">Hire me</a>
+        </div>
+    </section>
+    <section class="cards-section">
+        <div class="cards-grid">
+            <!-- Services Card -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        My Services
+                    </div>
+                    <div class="service-card-back">
+                        <ul>
+                            <li><strong>Website Development</strong> - Personal, portfolio, business, or e-commerce websites<br><em>HTML/CSS/JS, React, Node.js, Django, WordPress</em></li>
+                            <li><strong>Video Editing</strong> - Shorts, reels, cinematic content, promo videos<br><em>Adobe Premiere Pro, Final Cut, DaVinci Resolve, CapCut</em></li>
+                            <li><strong>Social Media Content Design</strong> - Instagram, LinkedIn, Twitter, YouTube</li>
+                            <li><strong>Tech Stack Consulting</strong> - Helping startups choose the right tools and technologies</li>
+                            <li><strong>Hybrid Services</strong> - Build & run a personal brand funnel (YouTube + landing page + newsletter)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills Card -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        Skills
+                    </div>
+                    <div class="service-card-back">
+                        <ul>
+                            <li><strong>Programming:</strong> Python, JavaScript, C++, Java</li>
+                            <li><strong>Web:</strong> HTML, CSS, React, Node.js, Django</li>
+                            <li><strong>Database:</strong> MySQL, MongoDB, SQLite</li>
+                            <li><strong>Tools:</strong> Git, VS Code, Figma</li>
+                            <li><strong>Other:</strong> Problem Solving, Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Education Card -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        Education
+                    </div>
+                    <div class="service-card-back">
+                        <ul>
+                            <li><strong>Bachelor of Technology</strong><br><em>Computer Science & Engineering</em><br>XYZ University, 2020-2024</li>
+                            <li><strong>Certifications:</strong> Web Development, Data Structures, Cloud Computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Card -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        Experience
+                    </div>
+                    <div class="service-card-back">
+                        <ul>
+                            <li><strong>Intern - Web Developer</strong><br>ABC Tech, Summer 2023</li>
+                            <li><strong>Freelancer</strong><br>Multiple web and video projects for clients</li>
+                            <li><strong>Open Source Contributor</strong><br>GitHub, 2022-present</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Card -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        Contact
+                    </div>
+                    <div class="service-card-back">
+                        <ul>
+                            <li><strong>Email:</strong> virattiwari@example.com</li>
+                            <li><strong>Phone:</strong> +91-7906649414</li>
+                            <li><strong>LinkedIn:</strong> /in/Virattiwari</li>
+                            <li><strong>Location:</strong> India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        
+        // Apply the saved theme
+        if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+        }
+
+        // Theme toggle function
+        function toggleTheme() {
+            if (body.classList.contains('light-mode')) {
+                // Switch to dark mode
+                body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                // Switch to light mode
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Add click event listener
+        themeToggleBtn.addEventListener('click', toggleTheme);
+
+        // Add keyboard support for accessibility
+        themeToggleBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleTheme();
+            }
+        });
+    </script>
+</body>
+</html>
